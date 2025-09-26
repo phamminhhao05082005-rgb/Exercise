@@ -57,7 +57,7 @@
                                 <td>{{ $user->address }}</td>
                                 <td>{{ $user->dob }}</td>
 
-                                {{-- ✅ Public URI column --}}
+                                {{--Public URI column --}}
                                 <td>
                                     @if($user->public_uri)
                                         <a href="{{ url($user->public_uri) }}" 
@@ -70,7 +70,7 @@
                                     @endif
                                 </td>
 
-                                {{-- ✅ is_public status --}}
+                                {{--is_public status --}}
                                 <td>
                                     @if($user->is_public)
                                         <span class="badge bg-success">Public</span>
@@ -79,7 +79,7 @@
                                     @endif
                                 </td>
 
-                                {{-- ✅ Action buttons --}}
+                                {{--Action buttons --}}
                                 <td class="d-flex gap-2">
                                     <a href="{{ route('users.edit', $user->id) }}" class="btn btn-sm btn-warning">Edit</a>
                                     <form action="{{ route('users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Are you sure?')">

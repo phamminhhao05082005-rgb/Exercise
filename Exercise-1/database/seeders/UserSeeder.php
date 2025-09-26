@@ -40,7 +40,7 @@ class UserSeeder extends Seeder
                 'phone' => '0927487346',
                 'address' => 'TP HCM',
                 'dob' => '2005-05-08',
-                'is_public' => false,
+                'is_public' => true,
             ]);
         }
     }

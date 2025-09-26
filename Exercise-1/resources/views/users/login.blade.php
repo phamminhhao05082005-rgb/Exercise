@@ -6,7 +6,7 @@
         <div class="page-header min-vh-100">
             <div class="container">
                 <div class="row">
-                    <!-- Form đăng nhập -->
+                    
                     <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
                         <div class="card card-plain">
                             <div class="card-header pb-0 text-start">
@@ -47,7 +47,7 @@
                         </div>
                     </div>
 
-                    <!-- Background hình ảnh Argon -->
+                    
                     <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
                         <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden">
                             <span class="mask bg-gradient-primary opacity-6"></span>
