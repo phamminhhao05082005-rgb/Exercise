@@ -11,7 +11,7 @@ class Authenticate
     public function handle(Request $request, Closure $next, $guard = null)
     {
         if (!Auth::check()) {
-            return redirect()->route('login')->with('error', 'Bạn cần đăng nhập trước!');
+            return redirect()->route('login')->with('error', 'Please log in!');
         }
 
         return $next($request);

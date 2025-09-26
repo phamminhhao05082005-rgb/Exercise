@@ -20,12 +20,12 @@ class RoleMiddleware
     {
         
         if (!Auth::check()) {
-            return redirect()->route('login')->with('error', 'Bạn cần đăng nhập!');
+            return redirect()->route('login')->with('error', 'Please log in!');
         }
 
         
         if (Auth::user()->role !== $role) {
-            abort(403, 'Bạn không có quyền truy cập trang này.');
+            abort(403, 'You do not have permission to access this page.');
         }
 
         return $next($request);
