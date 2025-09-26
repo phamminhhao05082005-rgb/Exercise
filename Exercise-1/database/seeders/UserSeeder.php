@@ -20,8 +20,8 @@ class UserSeeder extends Seeder
             'username' => 'admin',
             'password' => Hash::make('123456'),
             'role' => 'admin',
-            'phone' => '0123456789',
-            'address' => 'Company HQ',
+            'phone' => '0583894758',
+            'address' => 'TP HCM',
             'dob' => '2005-08-05',
             'is_public' => false,
         ]);
@@ -37,9 +37,9 @@ class UserSeeder extends Seeder
                 'username' => "employee$i",
                 'password' => Hash::make('123456'),
                 'role' => 'employee',
-                'phone' => '0987654321',
-                'address' => '123 Street, City',
-                'dob' => '1995-05-05',
+                'phone' => '0927487346',
+                'address' => 'TP HCM',
+                'dob' => '2005-05-08',
                 'is_public' => false,
             ]);
         }
