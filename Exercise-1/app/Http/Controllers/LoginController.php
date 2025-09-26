@@ -41,6 +41,7 @@ class LoginController extends Controller
 
         return back()->with('error', 'Incorrect username or password');
     }
+    
 
     public function logout(Request $request)
     {
