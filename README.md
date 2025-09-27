@@ -10,6 +10,7 @@
   + /login – trang đăng nhập
   + /users – quản lý nhân viên (Admin)
   + /nv-{id} – trang công khai của employee
+  + /employee - trang thông tin cá nhân của nhân viên
  
 ## Cài đặt + thử project:
 - Clone project
