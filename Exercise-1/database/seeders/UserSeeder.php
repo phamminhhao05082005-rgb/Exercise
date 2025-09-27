@@ -27,7 +27,6 @@ class UserSeeder extends Seeder
         ]);
 
 
-        
 
         
         for ($i = 1; $i <= 5; $i++) {

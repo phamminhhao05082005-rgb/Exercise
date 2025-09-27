@@ -11,13 +11,13 @@
                     </div>
                     <div class="card-body">
                         @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul class="mb-0">
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
                         @endif
 
                         <form method="POST" action="{{ route('users.update', $user->id) }}">
@@ -46,7 +46,10 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Role</label>
-                                <input type="text" name="role" class="form-control" value="{{ old('role', $user->role) }}">
+                                <select name="role" class="form-control">
+                                    <option value="employee" {{ old('role', $user->role) == 'employee' ? 'selected' : '' }}>Employee</option>
+                                    <option value="admin" {{ old('role', $user->role) == 'admin' ? 'selected' : '' }}>Admin</option>
+                                </select>
                             </div>
 
                             <div class="mb-3">

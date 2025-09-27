@@ -11,13 +11,13 @@
                     </div>
                     <div class="card-body">
                         @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul class="mb-0">
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
                         @endif
 
                         <form method="POST" action="{{ route('users.store') }}">
@@ -45,7 +45,10 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Role</label>
-                                <input type="text" name="role" class="form-control" value="{{ old('role') }}">
+                                <select name="role" class="form-control">
+                                    <option value="employee" {{ old('role') == 'employee' ? 'selected' : '' }}>Employee</option>
+                                    <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
+                                </select>
                             </div>
 
                             <div class="mb-3">
