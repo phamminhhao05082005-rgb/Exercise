@@ -8,9 +8,9 @@
 - public/argon - chứa các file của giao diện argon
 - Routes
   + /login – trang đăng nhập
-  + /users – quản lý nhân viên (Admin)
+  + /users – quản lý employee (Admin)
   + /nv-{id} – trang công khai của employee
-  + /employee - trang thông tin cá nhân của nhân viên
+  + /employee - trang thông tin cá nhân của employee
  
 ## Cài đặt + thử project:
 - Clone project
