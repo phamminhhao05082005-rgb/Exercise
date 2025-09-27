@@ -5,6 +5,7 @@
 - database/migrations – các file migration tạo bảng
 - database/seeders – seeder tạo dữ liệu mẫu
 - resources/views – giao diện Blade templates
+- public/argon - chứa các file của giao diện argon
 - Routes
   + /login – trang đăng nhập
   + /users – quản lý nhân viên (Admin)
