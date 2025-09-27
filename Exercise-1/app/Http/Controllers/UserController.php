@@ -31,7 +31,7 @@ class UserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'username' => $request->username,
-            'password' => Hash::make($request->password), 
+            'password' => Hash::make($request->password),
             'role' => $request->role ?? 'employee',
             'phone' => $request->phone,
             'address' => $request->address,
@@ -56,6 +56,13 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
+        $request->validate([
+            'public_uri' => 'nullable|string|max:255|unique:users,public_uri,' . $user->id,
+            
+        ], [
+            'public_uri.unique' => 'This Public URI is already taken. Please choose another one.',
+        ]);
+
         $data = [
             'name' => $request->name,
             'email' => $request->email,
@@ -69,7 +76,7 @@ class UserController extends Controller
         ];
 
         if ($request->password) {
-            $data['password'] = Hash::make($request->password); 
+            $data['password'] = Hash::make($request->password);
         }
 
         $user->update($data);
