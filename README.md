@@ -14,8 +14,8 @@
  
 ## Cài đặt + thử project:
 - Clone project
-- cài đặt dependencies: composer
-- cấu hình databse từ .env
+- Cài đặt dependencies: composer
+- Cấu hình databse từ .env
 - Chạy migration và seeder để tạo database mẫu
 - Chạy project
 - Truy cập http://127.0.0.1:8000/login để test
