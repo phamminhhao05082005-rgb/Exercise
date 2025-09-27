@@ -25,7 +25,7 @@ class UserController extends Controller
 
 
 
-    public function storeWeb(Request $request)
+    public function storeUser(Request $request)
     {
         User::create([
             'name' => $request->name,
@@ -52,7 +52,7 @@ class UserController extends Controller
 
 
 
-    public function updateWeb(Request $request, $id)
+    public function updateUser(Request $request, $id)
     {
         $user = User::findOrFail($id);
 
@@ -80,7 +80,7 @@ class UserController extends Controller
 
 
 
-    public function destroyWeb($id)
+    public function deleteUser($id)
     {
         User::findOrFail($id)->delete();
         return redirect()->route('users.index');
