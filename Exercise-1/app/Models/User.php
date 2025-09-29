@@ -36,11 +36,20 @@ class User extends Authenticatable
     protected static function booted()
     {
         static::created(function ($user) {
+        if ($user->role !== 'admin') {
+            $baseUri = '/nv-' . $user->id;
+            $publicUri = $baseUri;
+            $count = 1;
+
             
-            if ($user->role !== 'admin') {
-                $user->public_uri = '/nv-' . $user->id;
-                $user->save();
+            while (User::where('public_uri', $publicUri)->exists()) {
+                $publicUri = $baseUri . '-' . $count;
+                $count++;
             }
-        });
+
+            $user->public_uri = $publicUri;
+            $user->save();
+        }
+    });
     }
 }
